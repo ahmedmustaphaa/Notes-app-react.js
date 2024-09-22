@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background for contrast */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.contain {
+    background-color: rgba(30, 30, 30, 0.9); /* Slightly lighter background */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.containe-item {
+    width: 25%;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e1e1e; /* Darker card background */
+    margin: 0 auto;
+    overflow-y: auto;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition */
 }
 
-.App-link {
-  color: #61dafb;
+.containe-item:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.allnotes {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.allnotes h2 {
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffcc00; /* Bright accent color */
+}
+
+input {
+    background-color: #333; /* Darker input background */
+    border: none;
+    border-bottom: 2px solid #ffcc00; /* Highlighted bottom border */
+    padding: 8px 10px;
+    outline: none;
+    border-radius: 14px;
+    transition: border-color 0.3s; /* Smooth border transition */
+}
+
+input:focus {
+    border-color: #fff; /* Change border on focus */
+}
+
+.search {
+    font-size: 25px;
+    background-color: #444; /* Slightly darker */
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.search:hover {
+    background-color: #ffcc00; /* Highlight on hover */
+}
+
+#link {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #ffcc00; /* Bright accent color */
+}
+
+.fss {
+    font-size: 35px;
+    background-color: #ff3333; /* Bright accent color */
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.fss:hover {
+    background-color: #ff9999; /* Highlight on hover */
+}
+
+.noteitem {
+    padding: 4px;
+    background-color: #4a4a4a; /* Lighter note background */
+    border-radius: 15px;
+    margin: 5px 0;
+    transition: transform 0.2s; /* Smooth scaling */
+}
+
+.noteitem:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.plusicon {
+    position: absolute;
+    right: 20px;
+    font-size: 60px;
+    bottom: 60px;
+    color: #ff3333; /* Bright accent color */
+}
+
+#btn {
+    position: absolute;
+    left: 20px;
+    font-size: 20px;
+    bottom: 70px;
+    font-weight: bold;
+}
+
+.createnode {
+    padding: 20px;
+}
+
+.additem {
+    padding: 10px 20px;
+    background-color: rgba(255, 204, 0, 0.2); /* Soft accent background */
+    border-radius: 20px;
+    width: 100%;
+    outline: none;
+    margin: 10px;
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.additem:hover {
+    background-color: rgba(255, 204, 0, 0.5); /* Highlight on hover */
+}
+@media (min-width: 920px) {
+    .containe-item {
+        width: 60%;
+    }
+}
+
+@media (min-width: 720px) {
+    .containe-item {
+        width: 75%;
+    }
+}
+@media (min-width: 420px) {
+    .containe-item {
+        width: 100%;
+    }
 }
